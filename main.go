@@ -166,6 +166,12 @@ func sync(inst *install.Install, force bool) {
 			SourceType: install.Git,
 			Index:      0,
 		},
+		&install.Source{
+			Name:       "mesosphere-multiverse",
+			Path:       "https://github.com/mesosphere/multiverse.git",
+                        SourceType: install.Git,
+                        Index:      2,	
+		},
 	}
 
 	inst.SyncSources(sources, force)

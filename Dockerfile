@@ -4,10 +4,10 @@ MAINTAINER Ryan Eschinger <ryanesc@gmail.com>
 RUN apk add --update ca-certificates bash
 COPY launch.sh /launch.sh
 
-COPY . /go/src/github.com/CiscoCloud/mantl-api
+COPY . /go/src/github.com/emdem/mantl-api
 
 RUN apk add go git mercurial \
-	&& cd /go/src/github.com/CiscoCloud/mantl-api \
+	&& cd /go/src/github.com/emdem/mantl-api \
 	&& export GOPATH=/go \
 	&& go get -t -u github.com/stretchr/testify \
 	&& go get -t \
